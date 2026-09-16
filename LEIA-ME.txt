@@ -1,0 +1,25 @@
+Página /inicio — pacote separado (só a landing)
+
+Pasta: inicio-landing
+Não precisa do painel Glycon. É HTML + CSS + JS.
+
+Como abrir
+1) Dê dois cliques em index.html
+   ou suba a pasta inteira num host (Hostinger, Vercel, Netlify, pasta public_html).
+
+O que mudar
+- js/config.js
+  INICIO_PANEL  = URL do login (hoje https://engajamento.app.br/)
+  INICIO_SIGNUP = URL de cadastro
+- Cor da marca: no index.html, data-brand="blue"
+  opções: purple | blue | yellow | red
+- Preços/catálogo: edite os cards em index.html
+  (no site grande o catálogo vem do banco; aqui é exemplo pra a página funcionar sozinha)
+
+Arquivos
+  index.html
+  css/estilo.css
+  css/marca.css
+  js/config.js
+  js/app.js
+  img/why/  (4 fotos)

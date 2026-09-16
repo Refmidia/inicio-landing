@@ -1,0 +1,16 @@
+html[data-brand="purple"] {
+  --primary: #6D28D9;
+  --primary-2: #7C3AED;
+}
+html[data-brand="blue"] {
+  --primary: #2563EB;
+  --primary-2: #3B82F6;
+}
+html[data-brand="yellow"] {
+  --primary: #CA8A04;
+  --primary-2: #EAB308;
+}
+html[data-brand="red"] {
+  --primary: #DC2626;
+  --primary-2: #EF4444;
+}
