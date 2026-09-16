@@ -170,16 +170,6 @@
   apply('');
 
   list.addEventListener('click', function (e) {
-    var add = e.target.closest('.bb-add');
-    if (add) {
-      e.preventDefault();
-      var pop = document.getElementById('bbPop');
-      if (pop) {
-        pop.hidden = false;
-        document.body.style.overflow = 'hidden';
-      }
-      return;
-    }
     var btn = e.target.closest('.bb-qty__btn');
     if (!btn) return;
     var card = btn.closest('.bb-card');
@@ -227,6 +217,10 @@
 (function () {
   var panel = window.INICIO_PANEL || './';
   var signup = window.INICIO_SIGNUP || panel;
-  document.querySelectorAll('[data-go="panel"]').forEach(function (a) { a.setAttribute('href', panel); });
-  document.querySelectorAll('[data-go="signup"]').forEach(function (a) { a.setAttribute('href', signup); });
+  document.querySelectorAll('[data-go="panel"]').forEach(function (a) {
+    a.setAttribute('href', panel);
+  });
+  document.querySelectorAll('[data-go="signup"]').forEach(function (a) {
+    a.setAttribute('href', signup);
+  });
 })();
