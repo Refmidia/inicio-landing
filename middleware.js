@@ -1,5 +1,6 @@
 const ORIGIN_HOST = 'seguidor.app.br';
 const ORIGIN = 'http://177.104.165.255';
+const PANEL = 'https://engajamento.app.br/';
 const SIGNUP = 'https://engajamento.app.br/signup';
 
 export default async function middleware(request) {
@@ -22,6 +23,18 @@ export default async function middleware(request) {
   const ct = upstream.headers.get('content-type') || '';
   if (ct.includes('text/html')) {
     let html = await upstream.text();
+    html = html.replace(
+      /<a href="#" target="_blank" rel="noopener noreferrer" class="btn-ms-dark/g,
+      '<a href="' + PANEL + '" target="_blank" rel="noopener noreferrer" class="btn-ms-dark'
+    );
+    html = html.replace(
+      /<a href="#" target="_blank" rel="noopener noreferrer" class="btn-ms w-full/g,
+      '<a href="' + SIGNUP + '" target="_blank" rel="noopener noreferrer" class="btn-ms w-full'
+    );
+    html = html.replace(
+      /<a href="#" target="_blank" rel="noopener noreferrer" class="btn-ms-invert/g,
+      '<a href="' + SIGNUP + '" target="_blank" rel="noopener noreferrer" class="btn-ms-invert'
+    );
     html = html.replace(
       /(<a id="catalogo-[^"]+") href="#"/g,
       '$1 href="' + SIGNUP + '"'
