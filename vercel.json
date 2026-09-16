@@ -2,6 +2,11 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://seguidor.app.br/",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "destination": "https://seguidor.app.br/:path*",
       "permanent": false
