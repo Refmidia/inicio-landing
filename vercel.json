@@ -1,3 +1,11 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "seguidor.app.br" }],
+      "destination": "https://www.seguidor.app.br/:path*",
+      "permanent": true
+    }
+  ]
 }

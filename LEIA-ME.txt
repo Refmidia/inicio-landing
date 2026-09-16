@@ -8,6 +8,7 @@ Como abrir
    ou suba a pasta inteira num host (Hostinger, Vercel, Netlify, pasta public_html).
 
 O que mudar
+- Site público: https://www.seguidor.app.br/
 - js/config.js
   INICIO_PANEL  = URL do login (hoje https://engajamento.app.br/)
   INICIO_SIGNUP = URL de cadastro
