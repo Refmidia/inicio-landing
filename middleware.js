@@ -1,5 +1,4 @@
-const ORIGIN_HOST = 'seguidor.app.br';
-const ORIGIN = 'http://177.104.165.255';
+const ORIGIN = 'https://seguidor.app.br';
 const PANEL = 'https://engajamento.app.br/';
 const SIGNUP = 'https://engajamento.app.br/signup';
 
@@ -12,7 +11,6 @@ export default async function middleware(request) {
   if (ua) headers.set('user-agent', ua);
   if (accept) headers.set('accept', accept);
   headers.set('accept-encoding', 'identity');
-  headers.set('host', ORIGIN_HOST);
 
   const upstream = await fetch(dest, {
     method: 'GET',
