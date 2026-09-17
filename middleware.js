@@ -1,6 +1,7 @@
 const ORIGIN = 'https://seguidor.app.br';
 const PANEL = 'https://engajamento.app.br/';
 const SIGNUP = 'https://engajamento.app.br/signup';
+const WHATSAPP = 'https://wa.me/5515991327816';
 
 export default async function middleware(request) {
   const url = new URL(request.url);
@@ -36,6 +37,10 @@ export default async function middleware(request) {
     html = html.replace(
       /(<a id="catalogo-[^"]+") href="#"/g,
       '$1 href="' + SIGNUP + '"'
+    );
+    html = html.replace(
+      /<a href="#" target="_blank" rel="noopener noreferrer" class="btn-ms mt-4 inline-flex/g,
+      '<a href="' + WHATSAPP + '" target="_blank" rel="noopener noreferrer" class="btn-ms mt-4 inline-flex'
     );
     return new Response(html, {
       status: upstream.status,
